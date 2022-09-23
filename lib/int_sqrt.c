@@ -25,6 +25,7 @@ inline unsigned long int_sqrt(unsigned long x)
 		return x;
 
 	place = 1UL << (BITS_PER_LONG - 2);
+	
 	do{
 		place >>= 2;
 	}while(place > x);
@@ -40,7 +41,6 @@ inline unsigned long int_sqrt(unsigned long x)
 		}
 		place >>= 2;
 	}while (place != 0);
-	}
 
 	return root;
 }
